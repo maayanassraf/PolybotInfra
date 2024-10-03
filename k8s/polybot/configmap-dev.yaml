@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-polybot-dev
+data:
+  TELEGRAM_APP_URL: https://maayana-k8s-ingress-controller.int-devops.click:443
+  BUCKET_NAME: tf-maayana-images-bucket-dev
+  SQS_QUEUE_NAME: tf-maayana-project-queue-dev
+  REGION_NAME: eu-north-1
+  DYNAMODB_TABLE: tf-maayana-predictions-dynamodb-table-dev
+  SECRET_ID: tf-telegram-botToken-dev
