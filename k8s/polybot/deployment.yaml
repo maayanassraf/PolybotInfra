@@ -20,15 +20,3 @@ spec:
         envFrom:
           - configMapRef:
               name: configmap-polybot-dev
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: polybot-service
-spec:
-  selector:
-    app: polybot
-  ports:
-    - protocol: TCP
-      port: 8443
-      targetPort: 8443
