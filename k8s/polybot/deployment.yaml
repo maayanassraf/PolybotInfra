@@ -5,7 +5,7 @@ metadata:
   labels:
     app: polybot
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: polybot
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: maayanassraf/polybot-aws-project:latest
+        image: maayanassraf/k8s-polybot:v1.0.4
         envFrom:
           - configMapRef:
               name: configmap-polybot-dev
