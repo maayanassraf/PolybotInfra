@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: configmap-polybot-prod
 data:
-  TELEGRAM_APP_URL: https://maayana-k8s-ingress-controller.int-devops.click:443
+  TELEGRAM_APP_URL: https://maayana-k8s-ingress-controller-2.int-devops.click:8443
   BUCKET_NAME: tf-maayana-images-bucket-prod
   SQS_QUEUE_NAME: tf-maayana-project-queue-prod
   REGION_NAME: eu-north-1
