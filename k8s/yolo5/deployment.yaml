@@ -19,4 +19,4 @@ spec:
         image: maayanassraf/yolo5-aws-project:latest
         envFrom:
           - configMapRef:
-              name: configmap-yolo5-prod
+              name: configmap-yolo5-dev
