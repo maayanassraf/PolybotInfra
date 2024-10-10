@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: maayanassraf/k8s-yolo5-dev:v1.0.7
+        image: maayanassraf/k8s-yolo5-dev:v1.0.8
         envFrom:
           - configMapRef:
               name: configmap-yolo5-dev
