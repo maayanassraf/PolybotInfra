@@ -9,3 +9,4 @@ data:
   REGION_NAME: eu-north-1
   DYNAMODB_TABLE: tf-maayana-predictions-dynamodb-table-dev
   SECRET_ID: tf-telegram-botToken-dev
+  ENV: dev
