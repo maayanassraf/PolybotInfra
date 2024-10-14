@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: maayanassraf/k8s-polybot:v1.0.9
+        image: maayanassraf/k8s-polybot:v1.0.10
         envFrom:
           - configMapRef:
               name: configmap-polybot-prod
