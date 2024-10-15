@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: yolo5
+  name: polybot
   labels:
-    app: yolo5
+    app: polybot
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: yolo5
+      app: polybot
   template:
     metadata:
         labels:
-          app: yolo5
+          app: polybot
     spec:
       containers:
       - name: server
-        image: maayanassraf/k8s-yolo5:v1.0.9
+        image: maayanassraf/k8s-polybot-dev:v1.0.11
         envFrom:
           - configMapRef:
-              name: configmap-yolo5-prod
+              name: configmap-polybot-dev
