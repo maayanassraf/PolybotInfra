@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yolo5
+  labels:
+    app: yolo5
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yolo5
+  template:
+    metadata:
+        labels:
+          app: yolo5
+    spec:
+      containers:
+      - name: server
+        image: maayanassraf/k8s-yolo5:v1.0.9
+        envFrom:
+          - configMapRef:
+              name: configmap-yolo5-prod

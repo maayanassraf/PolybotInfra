@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: polybot
+  labels:
+    app: polybot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: polybot
+  template:
+    metadata:
+        labels:
+          app: polybot
+    spec:
+      containers:
+      - name: server
+        image: maayanassraf/k8s-polybot:v1.0.10
+        envFrom:
+          - configMapRef:
+              name: configmap-polybot-prod

@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: polybot-ingress-prod
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+spec:
+  tls:
+  - hosts:
+    - maayana-k8s-ingress-controller.int-devops.click
+  rules:
+  - host: maayana-k8s-ingress-controller.int-devops.click
+    http:
+      paths:
+      - path: /prod
+        pathType: Prefix
+        backend:
+          service:
+            name: polybot-service
+            port:
+              number: 8443
+  ingressClassName: nginx
