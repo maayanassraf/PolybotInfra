@@ -17,7 +17,7 @@ pipeline {
         stage('Update Yaml') {
             steps {
                 sh '''
-                  cd k8s/$SERVICE_NAME
+                  cd k8s/dev/$SERVICE_NAME
                   sed -i "s|image: .*|image: ${IMAGE_FULL_NAME_PARAM}|" deployment.yaml
 
                   git config user.email "jenkins@noreply.com"
