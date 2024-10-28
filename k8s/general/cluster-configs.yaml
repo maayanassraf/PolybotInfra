@@ -1,0 +1,15 @@
+# cluster-configs.yaml
+
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+clusterName: maayana-k8s   # TODO change to your cluster name
+apiServer:
+  extraArgs:
+    cloud-provider: external
+    allow-privileged: "true"
+controllerManager:
+  extraArgs:
+    cloud-provider: external
+networking:
+  podSubnet: "10.244.0.0/16"
+  serviceSubnet: "10.96.0.0/12"
