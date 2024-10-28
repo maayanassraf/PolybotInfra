@@ -19,11 +19,11 @@ spec:
         image: maayanassraf/k8s-polybot-dev:v1.0.15
         resources:
           requests:
-            cpu: 300m
-            memory: 300Mi
+            cpu: 500m
+            memory: 500Mi
           limits:
-            cpu: 300m
-            memory: 300Mi
+            cpu: 500m
+            memory: 500Mi
         envFrom:
           - configMapRef:
               name: configmap-polybot-dev
