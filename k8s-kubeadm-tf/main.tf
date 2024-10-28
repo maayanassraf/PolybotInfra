@@ -189,7 +189,7 @@ resource "aws_iam_role_policy_attachment" "attach_control_plane_role_cert_manage
 
 resource "aws_instance" "worker_node" {
   # number of worker nodes to provision
-  count = 1
+  count = 2
 
   ami                    = var.ami_id
   instance_type          = var.instance_type
