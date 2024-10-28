@@ -1,0 +1,12 @@
+# ebs-csi-values.yaml
+
+storageClasses:
+  - name: ebs-sc
+    annotations:
+      storageclass.kubernetes.io/is-default-class: "true"
+    provisioner: ebs.csi.aws.com
+    volumeBindingMode: WaitForFirstConsumer
+    parameters:
+      csi.storage.k8s.io/fstype: xfs
+      type: gp2
+      encrypted: "true"
